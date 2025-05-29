@@ -18,13 +18,12 @@ public class FacturaElectricaDemo {
         final double tarifaPotencia = 0.015; // Tarifa de potencia por kW y día
 
         // Término de energía
-        if(tarifaVH) {
+        if (tarifaVH) {
             // Tarifa Vehículo eléctrico 0.20 €/kWh para P1 (horas diurnas)
             costeEP1 = energiaP1 * 0.20;
             // Tarifa Vehículo eléctrico 0.05 €/kWh para P2 (horas nocturnas)
             costeEP2 = energiaP2 * 0.05;
-        }
-        else {
+        } else {
             // Tarifa normal 0.15 €/kWh para P1 (horas diurnas)
             costeEP1 = energiaP1 * 0.15;
             // Tarifa normal 0.10 €/kWh para P2 (horas nocturnas)
@@ -45,11 +44,9 @@ public class FacturaElectricaDemo {
         total += impuestoElectrico;
 
         // Aplicación del IVA
-        if(canarias) {
+        if (canarias) {
             total += 0.05 * total;
-        }
-        else
-        {
+        } else {
             total += 0.10 * total;
         }
         return total;
